@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1, IE=edge">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>A Dating Website</title>
+</head>
+<body>
+    <div class='container'>
+        <h2>Please Enter Your Details For Our Dating Website</h2>
+        <form>
+            <div class="bottom-margin">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="flex-row-space-between" onmouseover="fontSizeBigger(this)" onmouseout="fontSizeSmaller(this)">
+                        <span>
+                            <label for="img">Your image:</label>
+                            <input type="file" id="avatar-upload" name="avatar" accept="image/*" required />
+                        </span>
+                        <img id="avatar"/>
+                    </div>
+                    <div class="flex-row-space-between" onmouseover="fontSizeBigger(this)" onmouseout="fontSizeSmaller(this)">
+                        <span>
+                            <label for="img">Voice sample:</label>
+                            <input type="file" id="audio-upload" name="avatar" accept="audio/*" required/>
+                        </span>
+                        <audio id="voice-sample" controls></audio>
+                    </div>
+                    <div class="flex-row-space-between" onmouseover="fontSizeBigger(this)" onmouseout="fontSizeSmaller(this)">
+                        <span>
+                            <label for="img">Video sample:</label>
+                            <input type="file" id="video-upload" name="video" accept="video/*" required/>
+                        </span>
+                        <video id="video-sample" controls></video>
+                    </div>  
+                </fieldset>
+            </div>
+            <div class="bottom-margin">
+                <fieldset>
+                    <legend>Your General Details</legend>
+                    <div onmouseover="showFullNameTooltip(this)" onmouseout="hideFullNameTooltip(this)"
+                        class="relative">
+                        <label id="name-label" for="full-name">Name:</label>
+                        <input id="name-input" type="text" placeholder="Your full name" required />
+                        <span id="name-input-tooltip">Your full name</span>
+                        <br>
+                    </div>
+                    <div onmouseover="fontSizeBigger(this)" onmouseout="fontSizeSmaller(this)">
+                        <label>Gender:</label>
+                        <input type="radio" name="gender" id="male" value="male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female" value="female">
+                        <label for="female">Female</label>
+                        <br>
+                    </div>
+                    <div onmouseover="fontSizeBigger(this)" onmouseout="fontSizeSmaller(this)">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" step="1" required />
+                        <br>
+                    </div>
+                    <div onmouseover="fontSizeBigger(this)" onmouseout="fontSizeSmaller(this)">
+                        <label for="dob">Date of birth: </label>
+                        <input type="date" id="dob" />
+                        <br>
+                    </div>
+                    <div onmouseover="fontSizeBigger(this)" onmouseout="fontSizeSmaller(this)">
+                        <label for="fav-color">Favorite color</label>
+                        <input type="color" id="fav-color" required />
+                        <br>
+                    </div>
+                    <div onmouseover="fontSizeBigger(this)" onmouseout="fontSizeSmaller(this)">
+                        <label for="country">Which country?</label>
+                        <select id="country" required>
+                            <option value="USA">USA</option>
+                            <option value="Canada">Canada</option>
+                        </select>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="bottom-margin">
+                <fieldset>
+                    <legend>Your Indicators</legend>
+                    <div onmouseover="fontSizeBigger(this)" onmouseout="fontSizeSmaller(this)">
+                        <label for="height">Height:</label>
+                        <span class="bg-red text-white sm-padding sm-margin">Short</span>
+                        <input type="range" required />
+                        <span class="bg-purple text-white sm-padding">Tall</span>
+                        <br>
+                    </div>
+                    <div onmouseover="fontSizeBigger(this)" onmouseout="fontSizeSmaller(this)">
+                        <label for="height">Salary:</label>
+                        <span class="bg-red text-white sm-padding sm-margin">Poor</span>
+                        <input type="range" required />
+                        <span class="bg-purple text-white sm-padding">Rich</span>
+                        <br>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="bottom-margin">
+                <fieldset>
+                    <legend>Your Contact Information</legend>
+                    <div onmouseover="fontSizeBigger(this)" onmouseout="fontSizeSmaller(this)">
+                        <label for="email">Email:</label>
+                        <input type="email" required />
+                        <br>
+                    </div>
+                    <div onmouseover="fontSizeBigger(this)" onmouseout="fontSizeSmaller(this)">
+                        <label for="mobile">Mobile:</label>
+                        <input type="tel" required />
+                        <br>
+                    </div>
+                    <div onmouseover="fontSizeBigger(this)" onmouseout="fontSizeSmaller(this)">
+                        <label for="address">Address:</label>
+                        <input type="text" required />
+                        <br>
+                    </div>
+                    <div onmouseover="fontSizeBigger(this)" onmouseout="fontSizeSmaller(this)">
+                        <label for="contact-method">Method to contact you:</label>
+                        <input type="radio" name="contact-method" id="by-email" value="Email" required>
+                        <label for="contact-by-email">Email</label>
+                        <input type="radio" name="contact-method" id="by-whatsapp" value="Whatsapp">
+                        <label for="contact-by-whatsapp">Whatsapp</label>
+                        <input type="radio" name="contact-method" id="by-in-app-chat" value="In-App Chat">
+                        <label for="by-in-app-chat">In-app chat</label>
+                    </div>
+
+                </fieldset>
+            </div>
+            <input type="submit" />
+        </form>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

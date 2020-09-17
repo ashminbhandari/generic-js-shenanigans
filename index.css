@@ -1,0 +1,88 @@
+html {
+    font-size: small;
+}
+
+::placeholder {
+    font-size: small;
+}
+
+input, select {
+    margin: 7px;
+}
+
+.container {
+    border: 1px solid #e8e7e3;
+    padding: 10px;
+    box-shadow: 1px 1px 1px #e8e7e3;
+} 
+
+fieldset {
+    border: 1px solid black;
+    background-color: whitesmoke;
+}
+
+.bottom-margin {
+    margin-bottom: 20px;
+}
+
+.bg-red {
+    background-color: maroon;
+}
+
+.bg-purple {
+    background-color: purple;
+}
+
+.text-white{
+    color: white;
+}
+
+.sm-padding {
+    padding: 0.5px 10px 0.5px 10px;
+}
+
+.sm-margin {
+    margin: 3px;
+}
+
+.relative {
+    position: relative;
+}
+
+#name-input-tooltip {
+    position:absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 6px;
+    padding: 5px;
+    z-index: 1;
+    visibility: hidden;
+}
+
+.flex-row-space-between {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#avatar {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+  overflow: hidden;
+  border: 2px solid black;
+  margin-right: 50px;
+  margin-left: 10px;
+}
+
+#video-sample {
+    height: 200px;
+    width: 400px;
+    margin-left: 10px;
+}
+
+#audio-sample {
+    margin-left: 10px;
+}
